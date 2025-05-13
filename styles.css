@@ -20,10 +20,43 @@ li {
   margin-left: 24px;
 }
 
+/* 
+
+NAV 
+
+*/
+
 nav {
   height: 80px;
   display: flex;
   background-color: #05986238;
+}
+
+.nav__container {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 24px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.logo {
+  font-size: 48px;
+  color: #059862;
+  font-weight: 500;
+}
+
+.logo--small {
+  display: none;
+}
+
+.nav__right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .nav__link {
@@ -40,43 +73,15 @@ nav {
   font-weight: 700;
 }
 
+/* 
+
+LANDING 
+
+*/
+
 header {
   height: calc(100vh - 80px);
   background-color: #059862;
-}
-
-.nav__container {
-  width: 100%;
-  max-width: 1200px;
-  padding: 0 24px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: relative;
-}
-
-.nav__right {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.button__container {
-  position: relative;
-  display: none;
-  width: 40px;
-  height: 40px;
-}
-
-.logo {
-  font-size: 48px;
-  color: #059862;
-  font-weight: 500;
-}
-
-.logo--small {
-  display: none;
 }
 
 /* 
@@ -91,6 +96,13 @@ button {
   border: none;
   -webkit-tap-highlight-color: transparent;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.button__container {
+  position: relative;
+  display: none;
+  width: 40px;
+  height: 40px;
 }
 
 .burger__inner {
@@ -140,6 +152,7 @@ BURGER INGREDIENTS
 }
 
 .top-bun,
+.patty,
 .bottom-bun {
   position: absolute;
   background-color: #242424;
@@ -147,8 +160,12 @@ BURGER INGREDIENTS
   height: 45%;
   top: 50%;
   transform: translateY(-50%);
-  left: 0;
   border-radius: 100px;
+}
+
+.top-bun,
+.bottom-bun {
+  left: 0;
 }
 
 .top {
@@ -162,14 +179,7 @@ BURGER INGREDIENTS
 }
 
 .patty {
-  position: absolute;
-  background-color: #242424;
-  width: 100%;
-  height: 45%;
-  top: 50%;
   right: 0;
-  transform: translateY(-50%);
-  border-radius: 100px;
   opacity: 1;
   transition: width 400ms ease-out, opacity 60ms ease-out 90ms;
   will-change: width;
@@ -203,7 +213,7 @@ RESPONSIVENESS
   }
 }
 
-@media (max-width: 560px) {
+@media (max-width: 550px) {
   .button__container {
     display: flex;
   }
