@@ -153,7 +153,7 @@ BURGER INGREDIENTS
 
 .top {
   transform: translateY(0) rotate(0);
-  transition: all 600ms ease;
+  transition: transform 600ms ease;
   will-change: transform;
 }
 
@@ -171,18 +171,19 @@ BURGER INGREDIENTS
   transform: translateY(-50%);
   border-radius: 100px;
   opacity: 1;
-  transition: width 600ms ease-out, opacity 60ms ease-out 90ms;
+  transition: width 400ms ease-out, opacity 60ms ease-out 90ms;
+  will-change: width;
 }
 
 .menu--open .patty {
   width: 0;
   opacity: 0;
-  transition: width 600ms ease-out, opacity 60ms ease-in 240ms;
+  transition: width 400ms ease-out, opacity 60ms ease-in 240ms;
 }
 
 .bottom {
   transform: translateY(0) rotate(0);
-  transition: all 600ms ease;
+  transition: transform 600ms ease;
   will-change: transform;
 }
 
